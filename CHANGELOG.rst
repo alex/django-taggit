@@ -4,6 +4,9 @@ Changelog
 (Unreleased)
 ~~~~~~~~~~~~
 
+* **Backwards incompatible:** ``_TaggableManager`` now requires a ``field`` keyword argument in its ``__init__``. Custom managers passed as ``TaggableManager(manager=...)`` must accept it.
+* Expose ``field`` on ``_TaggableManager`` and add ``m2m_field_name`` to ``TaggableManager`` to improve compatibility with model introspection tools such as ``django-simple-history``
+
 7.0.0 (2026-11-02)
 ~~~~~~~~~~~~
 
