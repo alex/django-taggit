@@ -549,7 +549,7 @@ class TaggableManager(RelatedField):
         setattr(cls, name, self)
         if not cls._meta.abstract:
             if self.remote_field.hidden:
-                self.remote_field.related_name = "_%s_%s_%s_+" % (
+                self.remote_field.related_name = "_{}_{}_{}_+".format(
                     cls._meta.app_label,
                     cls.__name__.lower(),
                     name,
